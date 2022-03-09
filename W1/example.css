@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.container > .box {
+    flex: 30%;
+    height: 300px;
+    flex-grow: 0;
+}
+
+@media (max-width: 800px) {
+    .container > .box {
+        flex: 100%;
+    }
+}
+
+.box:nth-child(1) {
+    background-color: red;
+}
+
+.box:nth-child(2) {
+    background-color: blue;
+}
+
+.box:nth-child(3) {
+    background-color: yellow;
+}

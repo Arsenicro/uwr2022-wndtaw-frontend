@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <title>Document</title>
+        <script>
+            $(document).ready(() => {
+                $("#button").click(() => {
+                    let count = +$("#count").html();
+                    let newCount = count + 1;
+                    $("#count").html(newCount);
+                    if (newCount % 10 === 0) {
+                        $("#milestone").html(newCount);
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button id="button">Click</button>
+        <p id="count">0</p>
+        <p id="milestone"></p>
+    </body>
+</html>
