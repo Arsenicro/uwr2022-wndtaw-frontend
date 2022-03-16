@@ -2,6 +2,8 @@
 
 Twoim zadaniem jest stworzyć prostą aplikację do liczenia wydatków.
 
+Aplikację możesz tworzyć w repozytorium z poprzedniego zadania. Jeśli chcesz stworzyć nowe repozytorium, adres oraz dostęp do niego (jeśli jest to repozytorium ukryte) należy wysłać prowadzącym.
+
 Wymagania:
 
 - Możliwość dodania wydatku/przychodu (nazwa + kwota)
