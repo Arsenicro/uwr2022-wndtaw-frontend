@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
+import { useDispatch } from "react-redux";
 import { TodoContext } from "../../Context/TodoContext";
+import { removeTodo } from "../../Redux/TodoSlice";
 import ITodo from "../../types/ITodo";
 
 interface ITodoProps {
@@ -7,10 +9,10 @@ interface ITodoProps {
 }
 
 const Todo = ({ todo }: ITodoProps) => {
-  const { removeTodo } = useContext(TodoContext);
+  const dispatch = useDispatch();
 
   const onClick = () => {
-    removeTodo(todo.id);
+    dispatch(removeTodo(todo.id));
   };
 
   return (
