@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TodoContext } from "../../Context/TodoContext";
 import ITodo from "../../types/ITodo";
 
 interface ITodoProps {
   todo: ITodo;
-  removeTodo: (id: string) => void;
 }
 
-const Todo = ({ todo, removeTodo }: ITodoProps) => {
+const Todo = ({ todo }: ITodoProps) => {
+  const { removeTodo } = useContext(TodoContext);
+
   const onClick = () => {
     removeTodo(todo.id);
   };

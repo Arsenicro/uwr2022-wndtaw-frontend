@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { TodoContext } from "../../Context/TodoContext";
 
-interface ITodoFormProps {
-  addTodo: (name: string) => void;
-}
+interface ITodoFormProps {}
 
-const TodoForm = ({ addTodo }: ITodoFormProps) => {
+const TodoForm = ({}: ITodoFormProps) => {
   const [input, setInput] = useState("");
+  const { addTodo } = useContext(TodoContext);
 
   const onClick = () => {
     addTodo(input);
