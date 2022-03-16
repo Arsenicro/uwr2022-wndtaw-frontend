@@ -10,7 +10,7 @@ Przygotuj swoje środowisko pod kolejne zadania.
 
 # Pierwsza apka Reactowa, część 1
 
-Używając [CRA](create-react-app.dev) stwórz swoją pierwszą aplikację React.
+Używając [CRA](https://create-react-app.dev/) stwórz swoją pierwszą aplikację React.
 
 -   Twoja aplikacja powinna używać TypeScriptu. W tym celu znajdź w dokumentacji odpowiednią flagę.
 -   Stwórz dwa nowe komponenty: `Logo` i `HelloWorld`. Jeden z nich (dowolny) powinien być komponentem klasowym a jeden funkcyjnym.
