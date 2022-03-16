@@ -1,9 +1,8 @@
 import React from "react";
-import ClassCounter from "./ClassCounter";
-import FunctionalCounter from "./FunctionalCounter";
+import TodoList from "./Components/TodoLis/TodoList";
 
 function App() {
-  return <FunctionalCounter />;
+  return <TodoList />;
 }
 
 export default App;
