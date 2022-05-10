@@ -13,12 +13,12 @@ const App = () => {
   });
 
   const getData = useCallback(() => {
-    axios.post(
+    client.get(
       `/quotes/anime?title=naruto&page=${page}`,
     )
       .then((quotes) => setData(quotes.data))
       .catch((reason) => console.log(reason));
-  }, [page]);
+  }, [client, page]);
 
   useEffect(() => {
     getData();
