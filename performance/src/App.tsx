@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
-import Form from './Components/Form';
+import React, { Suspense, useEffect, useState } from 'react';
 import { ICountry } from './types/Country.type';
+
+const Form = React.lazy(() => import('./Components/Form'));
 
 const App = () => {
   const [countries, setCountries] = useState<ICountry[]>([]);
@@ -13,7 +14,9 @@ const App = () => {
 
   return (
     <div>
-      <Form countries={countries} />
+      <Suspense fallback="Loading...">
+        <Form countries={countries} />
+      </Suspense>
     </div>
   );
 };
