@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { ICountry } from '../types/Country.type';
 import { IFormData, FormDataFieldType } from '../types/FormData.type';
 import Input from './Input';
@@ -20,7 +20,9 @@ const Form = ({ countries }: IFormProps) => {
     address: '',
   });
 
-  const handleChange = (field: FormDataFieldType) => (value: string) => setFormData((current) => ({ ...current, [`${field}`]: value }));
+  const handleChange = useCallback((field: FormDataFieldType) => (value: string) => setFormData((current) => ({ ...current, [`${field}`]: value })), []);
+  const handleSelectChange = useCallback(() => handleChange('country'), [handleChange]);
+  const options = useMemo(() => countries.map((country) => country.name.common), [countries]);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -34,7 +36,7 @@ const Form = ({ countries }: IFormProps) => {
       <Input id="password" label="Password" type="password" value={formData.password} onChange={handleChange('password')} />
       <Input id="email" label="Email" value={formData.email} onChange={handleChange('email')} />
       <Input id="phone" label="Phone" value={formData.phone} onChange={handleChange('phone')} />
-      <Select id="countries" label="Country" value={formData.country} onChange={handleChange('country')} options={countries.map((country) => country.name.common)} />
+      <Select id="countries" label="Country" value={formData.country} onChange={handleSelectChange} options={options} />
       <Input id="postal" label="Postal" value={formData.postal} onChange={handleChange('postal')} />
       <Input id="address" label="Address" value={formData.address} onChange={handleChange('address')} />
       <button type="submit">Submit</button>

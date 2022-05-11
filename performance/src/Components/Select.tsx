@@ -30,4 +30,4 @@ const Select = ({
   </div>
 );
 
-export default Select;
+export default React.memo(Select);
