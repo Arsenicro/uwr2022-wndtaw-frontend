@@ -10,7 +10,7 @@ interface ITodoProps {
 const Todo = ({
   name, completed, setCompletion, remove,
 }: ITodoProps) => (
-  <div>
+  <div data-cy={`todo-${name}`}>
     {name}
     {' '}
     <input type="checkbox" checked={completed} onChange={(e) => setCompletion(e.target.checked)} />

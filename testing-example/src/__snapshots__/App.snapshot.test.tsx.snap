@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render 1`] = `
+Array [
+  <div>
+    Todo List!
+  </div>,
+  <input
+    data-cy="add-input"
+    onChange={[Function]}
+    value=""
+  />,
+  " ",
+  <button
+    data-cy="add-button"
+    onClick={[Function]}
+    type="button"
+  >
+    Add
+  </button>,
+  <div
+    data-cy="todo-Go shopping"
+  >
+    Go shopping
+     
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+    />
+     
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Remove
+    </button>
+  </div>,
+  <div
+    data-cy="todo-Pay rent"
+  >
+    Pay rent
+     
+    <input
+      checked={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+     
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Remove
+    </button>
+  </div>,
+  <div
+    data-cy="todo-Go swimming"
+  >
+    Go swimming
+     
+    <input
+      checked={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+     
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Remove
+    </button>
+  </div>,
+  <div
+    data-cy="todo-Study for AiSD exam"
+  >
+    Study for AiSD exam
+     
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+    />
+     
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Remove
+    </button>
+  </div>,
+  <div
+    data-cy="todo-Prepare dinner"
+  >
+    Prepare dinner
+     
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+    />
+     
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Remove
+    </button>
+  </div>,
+]
+`;

@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <>
-      Todo List
+      <div>Todo - List!</div>
       <TodoInput addTodo={addTodo} />
       <TodoList todos={todos} changeTodoStatus={changeTodoStatus} remove={removeTodo} />
     </>

@@ -17,9 +17,9 @@ const TodoInput = ({ addTodo }: ITodoInputProps) => {
 
   return (
     <>
-      <input value={todo} onChange={(e) => setTodo(e.target.value)} />
+      <input data-cy="add-input" value={todo} onChange={(e) => setTodo(e.target.value)} />
       {' '}
-      <button type="button" onClick={() => submit()}>Add</button>
+      <button data-cy="add-button" type="button" onClick={() => submit()}>Add</button>
     </>
   );
 };
